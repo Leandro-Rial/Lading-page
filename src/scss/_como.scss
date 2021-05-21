@@ -1,0 +1,283 @@
+@mixin flex {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.como {
+  @include flex();
+  padding: 50px;
+  background: #3636ec;
+
+  .como-funciona {
+    text-align: center;
+    padding: 50px 0;
+    color: #f9f9f9;
+
+    .fa-plane-departure {
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 100;
+      letter-spacing: 1px;
+      margin: 20px;
+    }
+
+    p {
+      line-height: 2rem;
+    }
+  }
+
+  .precios {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .precios-ofertas {
+      margin: 20px;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      background: cornflowerblue;
+      color: #fff;
+
+      .fa-dollar-sign {
+        font-size: 3rem;
+        margin: 10px 0;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+      }
+
+      p {
+        margin: 10px;
+      }
+
+      h4 {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        font-weight: 100;
+      }
+
+      strong {
+        font-weight: 100;
+        color: lightgreen;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .empresas {
+    @include flex();
+    padding: 50px 0;
+    background: cornflowerblue;
+    border-radius: 10px;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 100;
+      padding: 20px 0;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    img {
+      width: 200px;
+      margin: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .como {
+
+    .como-funciona {
+
+      .fa-plane-departure {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        line-height: 1.5rem;
+        font-size: .8rem;
+      }
+    }
+
+    .precios {
+      padding: 20px 0;
+
+      .precios-ofertas {
+        margin: 10px;
+        padding: 10px;
+
+        .fa-dollar-sign {
+          font-size: 2rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          margin: 10px;
+          font-size: .7rem;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+      }
+    }
+
+    .empresas {
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      img {
+        width: 100px;
+        margin: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .como {
+
+    .como-funciona {
+
+      .fa-plane-departure {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        line-height: 1.5rem;
+        font-size: .8rem;
+      }
+    }
+
+    .precios {
+      padding: 20px 0;
+
+      .precios-ofertas {
+        margin: 10px;
+        padding: 10px;
+
+        .fa-dollar-sign {
+          font-size: 2rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          margin: 10px;
+          font-size: .8rem;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+      }
+    }
+
+    .empresas {
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      img {
+        width: 100px;
+        margin: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .como {
+    padding: 50px 20px;
+
+    .como-funciona {
+
+      .fa-plane-departure {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        line-height: 1.5rem;
+        font-size: .6rem;
+      }
+    }
+
+    .precios {
+      padding: 20px 0;
+      display: block;
+
+      .precios-ofertas {
+        width: 100%;
+        height: 300px;
+        margin: 20px 0;
+        padding: 10px;
+
+        .fa-dollar-sign {
+          font-size: 2rem;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          margin: 10px;
+          font-size: .6rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+      }
+    }
+
+    .empresas {
+      width: 100%;
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      img {
+        display: block;
+        width: 150px;
+        padding: 10px 0;
+      }
+    }
+  }
+}

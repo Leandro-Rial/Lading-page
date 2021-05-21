@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@mixin flexpage {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin header {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+
+    .left {
+        padding: 10px;
+        background: lightgreen
+    }
+    
+    .logo {
+        @include flexpage();
+        width: 100%;
+        padding: 15px 10%;
+        background: #3636ec;
+        
+        .air-logo {
+            @include header();
+    
+        }
+        
+        strong {
+            @include header();
+            letter-spacing: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .header {
+    
+        .left {
+            padding: 8px;
+        }
+        
+        .logo {
+            @include flexpage();
+            width: 100%;
+            padding: 15px 10%;
+            font-size: .8rem;
+            background: #3636ec;
+            
+            .air-logo {
+                @include header();
+        
+            }
+            
+            strong {
+                @include header();
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+    
+        .left {
+            padding: 8px;
+        }
+        
+        .logo {
+            @include flexpage();
+            width: 100%;
+            padding: 15px 10%;
+            font-size: .7rem;
+            background: #3636ec;
+            
+            .air-logo {
+                @include header();
+        
+            }
+            
+            strong {
+                @include header();
+                font-size: .7rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .header {
+    
+        .left {
+            padding: 8px;
+        }
+        
+        .logo {
+            @include flexpage();
+            width: 100%;
+            padding: 15px 10%;
+            font-size: .6rem;
+            background: #3636ec;
+            
+            .air-logo {
+                @include header();
+        
+            }
+            
+            strong {
+                @include header();
+                font-size: .6rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

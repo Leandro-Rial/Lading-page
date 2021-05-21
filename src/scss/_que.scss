@@ -1,0 +1,192 @@
+@mixin button {
+  background: #1adb9e;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.que {
+  @include flexpage();
+  position: relative;
+  background: #3636ec;
+  height: 90vh;
+  color: #fff;
+  padding: 0 8%;
+
+  .que-parte-one {
+    width: 50%;
+    text-align: center;
+  }
+
+  .que-parte-one h1 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+
+  .negrita {
+    color: lightgreen;
+  }
+
+  .que-parte-one h4 {
+    font-size: 1.5rem;
+    padding: 20px 15%;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+  .que-parte-one button {
+      @include button();
+      padding: 20px;
+      font-size: 1.8rem;
+      width: 250px;
+  }
+
+  .que-parte-two {
+    width: 50%;
+    padding: 0 10%;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    form {
+      padding: 20px;
+      border: 10px solid #6a96e7;
+      background: #fff;
+      color: #000;
+
+      .rows label,
+      input,
+      button {
+        width: 100%;
+      }
+
+      .rows label {
+        margin-top: 5px;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      .rows input {
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 15px;
+        @include button();
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .que {
+  
+    .que-parte-one h1 {
+      font-size: 2.8rem;
+    }
+  
+    .que-parte-one h4 {
+      font-size: 1.2rem;
+    }
+  
+    .que-parte-one button {
+        font-size: 1.2rem;
+        padding: 10px;
+        width: 160px;
+    }
+  
+    .que-parte-two {
+  
+      h1 {
+        font-size: 2rem;
+      }
+  
+      form {
+        padding: 10px;
+  
+        .rows label {
+          margin-top: 2px;
+          font-size: 1rem;
+          color: #333;
+        }
+  
+        .rows input {
+          padding: 5px;
+          margin: 10px 0;
+        }
+  
+        button {
+          margin-top: 10px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .que {
+    padding: 100px 2%;
+    display: block;
+    height: 100%;
+  
+    .que-parte-one {
+      width: 100%;
+    }
+
+    .que-parte-one h1 {
+      font-size: 2rem;
+      padding: 0 10px;
+      line-height: auto;
+      margin-bottom: 10px;
+    }
+  
+    .que-parte-one h4 {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+  
+    .que-parte-one button {
+        font-size: 1rem;
+        padding: 10px;
+        width: 160px;
+    }
+  
+    .que-parte-two {
+      width: 100%;
+      padding: 0 2%;
+  
+      h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+      }
+  
+      form {
+        padding: 10px;
+  
+        .rows label {
+          margin-top: 2px;
+          font-size: 1rem;
+          color: #333;
+        }
+  
+        .rows input {
+          padding: 5px;
+          margin: 10px 0;
+        }
+  
+        button {
+          margin-top: 10px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
